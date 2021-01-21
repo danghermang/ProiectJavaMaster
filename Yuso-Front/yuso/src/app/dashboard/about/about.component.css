@@ -1,0 +1,30 @@
+.about-content{
+    width: 900px;
+    height: 500px;
+    margin-left: calc(50% - 450px);
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+p{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    text-indent: 30px;
+    font-family: "Myriad Arabic";
+    color: #3A3A3A;
+    font-size: 20px;
+}
+
+h1{
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+    border-bottom: 1px solid lightgray;
+}
+
+#copyright_notice{
+    text-align: center;
+    margin-top: 50px;
+}

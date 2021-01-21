@@ -1,0 +1,29 @@
+<nav class="sidebar" [style.background]="sidebarColor">
+	<yuso-sidebar-btn buttonName="" hoverColor="#2F2F2F" backgroundColor="#2F2F2F" icon="assets/menu.svg" anim="false">
+	</yuso-sidebar-btn>
+
+	<a routerLink="/">
+		<yuso-sidebar-btn buttonName="Home" hoverColor="#E4572E" [backgroundColor]="sidebarColor" icon="assets/home_sidebar.svg" anim="true">
+		</yuso-sidebar-btn>
+	</a>
+
+	<a routerLink="/search">
+		<yuso-sidebar-btn buttonName="Search" hoverColor="#1E96DD" [backgroundColor]="sidebarColor" icon="assets/search.svg" anim="true">
+		</yuso-sidebar-btn>
+	</a>
+
+	<a routerLink="/bookings">
+		<yuso-sidebar-btn buttonName="Bookings" hoverColor="#FFD23E" [backgroundColor]="sidebarColor" icon="assets/bookings.svg" anim="true">
+		</yuso-sidebar-btn>
+	</a>
+
+	<a routerLink="/chat">
+		<yuso-sidebar-btn buttonName="Chat" hoverColor="#8155A9" [backgroundColor]="sidebarColor" icon="assets/chat.svg" anim="true">
+		</yuso-sidebar-btn>
+	</a>
+
+	<a routerLink="/statistics">
+		<yuso-sidebar-btn buttonName="Statistics" hoverColor="#76B041" [backgroundColor]="sidebarColor" icon="assets/statistics.svg" anim="true">
+		</yuso-sidebar-btn>
+	</a>
+</nav>

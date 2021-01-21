@@ -1,0 +1,37 @@
+<div class="page_content">
+	<div class="profile_container">
+		<div class="display_flex">
+			<img  src="data:image/jpg;base64,{{imageData}}">
+			<div>
+				<h2>{{firstname}} {{lastname}}</h2>
+				<div class="display_flex">
+					<h4>User rating:</h4>
+					<div class="stars">
+						<img *ngFor="let i of filledUserRatingStars" src="assets/star_fill.svg" class="star">
+						<img *ngFor="let i of emptyUserRatingStars" src="assets/star_empty.svg" class="star">
+					</div>
+				</div>
+				<div class="display_flex">
+					<h4>Transporter rating:</h4>
+					<div class="stars">
+						<img *ngFor="let i of filledTransRatingStars" src="assets/star_fill.svg" class="star">
+						<img *ngFor="let i of emptyTransRatingStars" src="assets/star_empty.svg" class="star">
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>User info:</h3>
+		<div class="display_flex">
+			<p>Country:</p><p class="userdata">Romania</p>
+		</div>
+		<div class="display_flex">
+			<p>County:</p><p class="userdata">{{county}}</p>
+		</div>
+        <div class="display_flex">
+            <p>City:</p><p class="userdata">{{city}}</p>
+        </div>
+		<div class="display_flex">
+			<p>Member since:</p><p class="userdata">{{dateJoined}}</p>
+		</div>
+	</div>
+</div>

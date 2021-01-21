@@ -1,0 +1,19 @@
+<div class="topbar">
+	<div class="topbar-container">
+		<div>
+			<img class="logo" src="assets/logo.svg">
+		</div>
+		<div class="profile">
+			<p class="profile-name" (click)="onProfileClick()">{{name_display}}</p>
+			<img class="profile_pic" src="data:image/jpg;base64,{{imageData}}" (click)="onProfileClick()">
+		</div>
+		<div id="profile_menubox_d" class="menubox" *ngIf="menubox_visible">
+			<p>{{name_display}}</p>
+			<ul id="profile_menubox_u">
+				<li (click)="onProfileBtnClick()">Profile</li>
+				<li (click)="onSettingsBtnClick()">Settings</li>
+				<li (click)="onLogoutClick()">Logout</li>
+			</ul>
+		</div>
+	</div>
+</div>

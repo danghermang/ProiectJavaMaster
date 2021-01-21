@@ -1,0 +1,69 @@
+.entry{
+    border: 1px solid whitesmoke;
+    height: 100px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.entry:hover{
+    background-color: ghostwhite;
+    border-color: lightgray;
+}
+
+.auction-name {
+    width: 400px;
+}
+
+img{
+    height: 75px;
+    border: 1px solid lightgray;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+p{
+    margin-left: 10px;
+    font-family: "Myriad Arabic";
+    font-size: 22px;
+    user-select: none;
+}
+
+.absolute_pos{
+    position: absolute;
+}
+
+.btn{
+    position: absolute;
+    right: 50px;
+    top: 28px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn p{
+    padding: 5px;
+    margin: 0;
+    font-size: 20px;
+}
+
+.btn:hover{
+    box-shadow: 1px 1px 5px lightgray;
+}
+
+.btn:active{
+    box-shadow: 1px 1px 5px gray;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.assign_date{
+    font-size: 18px;
+    color: gray;
+    margin-left: 100px;
+    margin-top: 45px;
+}

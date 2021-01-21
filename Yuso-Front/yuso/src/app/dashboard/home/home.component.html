@@ -1,0 +1,33 @@
+<div class="content">
+	<div class="box" id="homeHeader">
+		<div class="circle">
+			<img src="data:image/jpg;base64,{{imageData}}">
+		</div>
+		<div class="name">{{firstName}} {{lastName}}</div>
+		<img class="unread_msgs" src="assets/chat.svg">
+		<div class="msg_counter">{{unreadMessages}}</div>
+        <img class="bookings" src="assets/bookings.svg">
+		<div class="profits_circle">{{balance}} $</div>
+        <div class="bookings_counter">{{activeJobs}}</div>
+	</div>
+	<div class="box buttons_box">
+		<button mat-button routerLink="/createauction" class="btn">Create auction</button>
+		<button mat-button routerLink="/myauctions" class="btn">My auctions</button>
+		<button mat-button routerLink="/about" class="btn">About</button>
+		<button mat-button routerLink="/contact" class="btn">Contact us</button>
+	</div>
+	<div class="box">
+		<div class="article_box">
+			<h2>Welcome to yuso</h2>
+			<img class="logo" src="assets/logo.svg">
+			<p>This site is dedicated to people who want to transport or hire someone to get goods
+            from a place to another as cheap as possible. You can get your auction published in a few clicks,
+            or make some money by part-taking onto some auctions already created by other users.</p>
+			<p>In order to create an auction, you need to click on the 'Create auction' button above,
+            fill out a form with some basic information and click 'Submit'. From now on transporters can take part
+            on your auction. As an transporter, you can search for auctions or view the auctions you've already won by
+            using the sidebar. In the same place you can also chat and find statistics. Additional news will be posted here,
+            right on the homepage. The Yuso Team, wishes you good luck and profit!</p>
+		</div>
+	</div>
+</div>

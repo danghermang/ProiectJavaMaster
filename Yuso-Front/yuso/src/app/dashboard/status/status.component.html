@@ -1,0 +1,35 @@
+<div id="container" class="box">
+  <div id="left_panel">
+      <div class="display_flex">
+          <img class="main_img" src="assets/package.jpg">
+          <div>
+              <h1>{{bookingName}}</h1>
+              <p>Booking status: <span class="important_info" style="color: #76B041">{{status}}</span></p>
+              <p>Transport cost: <span class="important_info" style="color: #76B041">{{cost}}</span></p>
+              <p>Weight: <span class="important_info">{{weight}} kg</span></p>
+          </div>
+      </div>
+      <div class="img_container">
+          <img class="secondary_img" (click)="onImageClick()" src="assets/package.jpg">
+          <img class="secondary_img" (click)="onImageClick()" src="assets/package.jpg">
+      </div>
+  </div>
+  <div class="location_info">
+      <div id="location_container">
+          <p>Pickup point:</p>
+          <p class="indent">Country: <span class="important_info">Romania</span></p>
+          <p class="indent">City: <span class="important_info">{{fromCity}}</span></p>
+          <p class="indent">Address: <span class="important_info">{{fromAddress}}</span></p>
+          <p class="indent">Postal code: <span class="important_info">{{fromPostalCode}}</span></p>
+          <p>Drop off point:</p>
+          <p class="indent">Country: <span class="important_info">Romania</span></p>
+          <p class="indent">City: <span class="important_info">{{toCity}}</span></p>
+          <p class="indent">Address: <span class="important_info">{{toAddress}}</span></p>
+          <p class="indent">Postal code: <span class="important_info">{{toPostalCode}}</span></p>
+      </div>
+  </div>
+  <div id="additional_info_header"><p>Additional info:</p></div>
+  <div id="additional_info_content"><p>{{details}}</p></div>
+  <div id="map" class="map"></div>
+</div>
+<yuso-photoviewer #viewer></yuso-photoviewer>

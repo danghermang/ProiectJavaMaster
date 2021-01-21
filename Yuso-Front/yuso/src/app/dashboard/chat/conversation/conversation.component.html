@@ -1,0 +1,27 @@
+<div class="minimalistic" [@boxAnim]="state" (click)="onClick()">
+	<div class="circle">
+		<img src="assets/profile.jpg">
+	</div>
+	<div class="name">Mr. Anderson</div>
+	<div class="time" [@lastMsgAnim]="state">31 Mar 2017 - 13:37</div>
+	<div class="lastmessage" [@lastMsgAnim]="state" *ngIf="!showchatbox">Me: Do you have some red pills?</div>
+	<div #chatbox class="chatbox" *ngIf="showchatbox" [@chatboxAnim]="chatboxState" (click)="onEvent($event)">
+		<p><span class="chatboxTargetName">Mr Anderson:</span> Hello!</p>
+		<p><span class="chatboxMyName">Me:</span> Hello my dear customer!</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> I'd like to do some business with you!</p>
+		<p><span class="chatboxMyName">Me:</span> Do you have some red pills?</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> Hello!</p>
+		<p><span class="chatboxMyName">Me:</span> Hello my dear customer!</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> I'd like to do some business with youuuuuuuuuuuuuuuuuuuuuuuuuuu!</p>
+		<p><span class="chatboxMyName">Me:</span> Do you have some red pills?</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> Hello!</p>
+		<p><span class="chatboxMyName">Me:</span> Hello my dear customer!</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> I'd like to do some business with you!</p>
+		<p><span class="chatboxMyName">Me:</span> Do you have some red pills?</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> Hello!</p>
+		<p><span class="chatboxMyName">Me:</span> Hello my dear customer!</p>
+		<p><span class="chatboxTargetName">Mr Anderson:</span> I'd like to do some business with you!</p>
+		<p><span class="chatboxMyName">Me:</span> Do you have some red pills?</p>
+	</div>
+	<input type="text" spellcheck="false" *ngIf="showchatbox" [@chatboxAnim]="chatboxState" (click)="onEvent($event)">
+</div>

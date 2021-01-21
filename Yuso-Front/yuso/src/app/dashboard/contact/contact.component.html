@@ -1,0 +1,27 @@
+<div>
+  <h1 class="title">
+    Contact us!
+  </h1>
+</div>
+<div class="contact-box">
+  <form #registerForm="ngForm" (ngSubmit)="onRegisterClick()">
+      <label>Category:</label>
+      <select class="category-select">
+        <option value="site">Site</option>
+        <option value="auctions">Auctions</option>
+        <option value="users">Users</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+    <br>
+    <label>Subject:</label>
+    <input type="text" class="form-control" name="subjectField" required>
+    <br>
+    <label class="message-label">Message:</label>
+    <br>
+    <textarea name="message-content" class="message-text-area"></textarea>
+    <div>
+      <button type="submit" class="send-ticket-button">Send message</button>
+    </div>
+  </form>
+</div>

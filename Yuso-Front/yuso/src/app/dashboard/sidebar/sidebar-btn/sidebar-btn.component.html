@@ -1,0 +1,4 @@
+<div #btn class="sidebar-btn" (mouseenter)="hoverIn()" (mouseleave)="hoverOut()">
+	<img src={{icon}} [@btnAnim]='state'>
+	<p [@btnAnimInversed]='state'>{{buttonName}}</p>
+</div>

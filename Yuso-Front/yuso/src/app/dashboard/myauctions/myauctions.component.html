@@ -1,0 +1,12 @@
+<div id="container" class="box">
+  <h1>My Auctions</h1>
+  <div class="auction_container">
+      <div *ngFor="let item of jobList">
+          <yuso-bookings-entry buttonColor="antiquewhite" auctionName="{{item.name}}" details="{{item.aditionalDetails}}"
+              jobId="{{item.id}}"></yuso-bookings-entry>
+      </div>
+      <div *ngIf="jobList==null">
+          <p id="no_auctions_info">You have no auctions, yet...</p>
+      </div>
+  </div>
+</div>

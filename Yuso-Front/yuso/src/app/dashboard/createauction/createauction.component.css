@@ -1,0 +1,159 @@
+.form-control {
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    position: relative;
+    font-size: 14px;
+    width: 65%;
+    height: 5px;
+    padding: 10px;
+}
+
+.create-auction-box{
+    width: 800px;
+    height: 1030px;
+    margin-left: calc(50% - 400px);
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.create-auction-button{
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    padding: 10px 15px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-bottom-width: 2px;
+    width: 200px;
+    margin-left: calc(50% - 100px);
+    margin-top: 20px;
+}
+
+.create-auction-button:hover{
+    cursor: pointer;
+}
+
+.additional-details-input{
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    position: relative;
+    font-size: 14px;
+    width: 50%;
+    height: 70px;
+    padding: 10px;
+}
+
+.additional-details-field *{
+    vertical-align: top;
+}
+
+.additional-details-label {
+    margin-top: -1px;
+}
+
+.subsection{
+    font-weight: bold;
+}
+
+.auction_creation_success{
+    width: 800px;
+    height: 300px;
+    border: 1px solid lightgray;
+    background-color: white;
+    margin-top: 50px;
+    margin-left: calc(50% - 400px);
+    position: relative;
+}
+
+.success_title{
+    font-family: "Myriad Arabic";
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+.success_info{
+    margin-left: 30px;
+    margin-right: 50px;
+    text-indent: 40px;
+    white-space: 18px;
+}
+
+img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 25px;
+    right: 75px;
+}
+
+
+.btn{
+    border: 1px solid lightgray;
+    margin: 8px;
+    width: 150px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.btn:hover{
+    box-shadow: 1px 1px 5px lightgray;
+}
+
+.btn:active{
+    box-shadow: 1px 1px 5px gray;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn p{
+    margin: 0;
+    text-indent: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.map{
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 400px;
+    border: 1px solid lightgray;
+}
+
+.info_text{
+    margin-left: 50px;
+    font-family: "Myriad Arabic";
+    font-size: 20px;
+}
+
+.map_resize{
+    height: 500px;
+}
+
+.submit_resize{
+    height: 75px;
+}
+
+mat-card{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top:30px;
+}

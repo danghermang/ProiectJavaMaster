@@ -1,0 +1,149 @@
+.page_content{
+	position: relative;
+	margin-top: 25px;
+}
+
+.headings{
+	width: 250px;
+	height: 250px;
+	float: left;
+	border: 1px solid lightgray;
+	background-color: white;
+	margin-left: 50px;
+}
+
+.settings_content{
+	border: 1px solid lightgray;
+	background-color: white;
+	margin-left: 315px;
+	margin-right: 50px;
+	height: 500px;
+}
+
+.headings p{
+	text-align: center;
+	font-family: "Myriad Arabic";
+	font-size: 18px;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+
+.heading_unselected{
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #2F2F2F;
+	font-family: "Myriad Arabic";
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.heading_unselected:hover{
+	background-color: antiquewhite;
+}
+
+.heading_selected{
+	background-color: #E4572E;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+	font-family: "Myriad Arabic";
+	font-size: 16px;
+	cursor: pointer;
+}
+
+h1{
+	font-family: "Myriad Arabic";
+	font-weight: 500;
+	font-size: 30px;
+	margin-left: 25px;
+	margin-right: 25px;
+	border-bottom: 1px solid lightgray;
+	padding-left: 25px;
+}
+
+h2{
+	font-family: "Myriad Arabic";
+	font-weight: 500;
+	font-size: 25px;
+}
+
+.settings_container{
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+p{
+	font-family: "Myriad Arabic";
+	font-size: 20px;
+	position: relative;
+	margin: 5px;
+}
+
+#emailbox{
+	margin-left: 80px;
+	border: 1px solid #E4572E;
+	background-color: ghostwhite;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 100px;	
+	padding-right: 100px;
+}
+
+.password_label{
+	margin: 5px;
+	margin-left: 25px;
+}
+
+input{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 250px;
+	width: 250px;
+}
+
+#changePassBtn{
+	margin-top: 10px;
+	margin-left: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#savePersonalInfoBtn{
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 25px;
+}
+
+.profile_pic{
+	border: 1px solid black;
+	width: 150px;
+	height: 150px;
+}
+
+#image_select_label1{
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+#image_select_label2{
+	color: grey;
+	font-size: 17px;
+	margin-top: -4px;
+	margin-bottom: 20px;
+}
+
+#choose_pic{
+	margin: 0;
+}
+
+#save_pic{
+	margin: 0;
+	margin-top: 20px;
+}

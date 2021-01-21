@@ -1,0 +1,11 @@
+.sidebar{
+	position: fixed;
+	width: 50px;
+	height: 100%;
+	z-index: 100;
+}
+
+a{
+	text-decoration: none;
+	text-shadow: 1px 1px 1px black;
+}

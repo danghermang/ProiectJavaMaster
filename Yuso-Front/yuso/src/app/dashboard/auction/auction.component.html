@@ -1,0 +1,76 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="description_box">
+						<h2>{{auctionName}}</h2>
+						<div class="display_flex">
+							<p class="description_header">Photos:</p>
+							<div class="photos_container">
+								<img src="assets/package.jpg" class="photo" (click)="onImageClick()">
+								<img src="assets/package.jpg" class="photo" (click)="onImageClick()">
+							</div>
+						</div>
+						<div class="display_flex">
+							<p class="description_header">End date:</p><p class="description_info">{{endDate}}</p>
+						</div>
+						<div class="display_flex">
+							<p class="description_header">Weight:</p><p class="description_info">{{weight}} kg</p>
+						</div>
+						<div class="display_flex">
+							<p class="description_header">Pickup point:</p><p class="description_info">Romania, {{fromCity}}</p>
+						</div>
+						<div class="display_flex">
+							<p class="description_header">Drop-off point:</p><p class="description_info">Romania, {{toCity}}</p>
+						</div>
+						<div class="display_flex">
+							<p class="description_header">Additional info:</p>
+							<p class="description_ainfo">{{detalis}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<countdown-timer (zeroTrigger)="myfunc()" [end]="endDate + ' 20:15:00'"
+							style="font-size:30px;color:rgb(101, 165, 55);font-family:Roboto;" ></countdown-timer>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="">
+								<div #bidders_container class="bidders_container">
+									<ul>
+										<li *ngFor="let bidder of bidList">
+												<div class="display_flex">
+													<img src="data:image/jpg;base64,{{bidder.imageData}}">
+													<p class="bidder_name">{{bidder.biddername}}</p>
+												</div>
+											<p id="bidinfo">{{bidder.bidvalue}} $ - {{bidder.enterdate | date: 'H:mm - dd/MM/yyyy'}}</p>
+										</li>
+									</ul>
+								</div>
+								<input id="spinner" type="number" min="0" max="99999" class="form-control" [(ngModel)]="bidValue" [value]="bidValue">
+								&nbsp;
+								<input id="bid_btn" type="submit" value="Bid!" (click)="onBidBtnClick()">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="" *ngIf="bidList!=null">
+								<chart [options]="options"></chart>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div id="map" class="map"></div>
+				</div>
+			</div>
+	</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+<br/><br/>
+<yuso-photoviewer #viewer></yuso-photoviewer>

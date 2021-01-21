@@ -1,0 +1,87 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<img class="register-logo" src="assets/logo.svg">
+		</div>
+	</div>
+	<br/>
+	<form>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6 sign-up-form">
+				<div class="form-group row">
+					<label for="lastNameField" class="col-md-3 offset-md-1 col-form-label">Last name</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="lastNameField" required [(ngModel)]="lastName" [value]="lastName" placeholder="Last name">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="firstNameField" class="col-md-3 offset-md-1 col-form-label">First name</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="firstNameField" required [(ngModel)]="firstName" [value]="firstName" placeholder="First name">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="emailField" class="col-md-3 offset-md-1 col-form-label">E-mail</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="emailField" required [(ngModel)]="email" [value]="email" placeholder="Enter email">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="passwordField" class="col-md-3 offset-md-1 col-form-label">New password</label>
+					<div class="col-md-7">
+						<input type="password" class="form-control" name="passwordField" required [(ngModel)]="password" [value]="password" placeholder="Enter password">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="repeatPasswordField" class="col-md-3 offset-md-1 col-form-label">Confirm</label>
+					<div class="col-md-7">
+						<input type="password" class="form-control" name="repeatPasswordField" required [(ngModel)]="repeatPassword" [value]="repeatPasswordField" placeholder="Confirm password">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="countyField" class="col-md-3 offset-md-1 col-form-label">County</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="countyField" required [(ngModel)]="county" [value]="county" placeholder="County">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="cityField" class="col-md-3 offset-md-1 col-form-label">City</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="cityField" required [(ngModel)]="city" [value]="city" placeholder="City">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="addressField" class="col-md-3 offset-md-1 col-form-label">Address</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="addressField" required [(ngModel)]="address" [value]="address" placeholder="Address">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="postalCodeField" class="col-md-3 offset-md-1 col-form-label">Postal code</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="postalCodeField" required [(ngModel)]="postalCode" [value]="postalCode" placeholder="Postal code">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="phoneNumberField" class="col-md-3 offset-md-1 col-form-label">Phone</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="phoneNumberField" required [(ngModel)]="phoneNumber" [value]="phoneNumber" placeholder="Mobile">
+					</div>
+				</div>		
+				<br/>
+				<div class="form-group row">
+					<div class="offset-md-3">
+						<mat-checkbox color="primary">I agree with the Terms and Conditions</mat-checkbox>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-md-12 text-center">
+						<button type="button" class="btn btn-outline-primary" (click)="onRegisterClick()">Register</button>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<br/><br/>
+</div>

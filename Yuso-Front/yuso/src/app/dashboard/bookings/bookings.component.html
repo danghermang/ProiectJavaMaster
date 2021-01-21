@@ -1,0 +1,17 @@
+<div class="headings">
+	<p id="bookings_headings_label">BOOKINGS</p>
+	<ul>
+		<li	*ngFor="let item of headingItems; let i = index"
+			   [ngClass]="{ 'heading_selected':item.selected, 'heading_unselected':!item.selected }"
+			   (click)="onHeadingClick(i)">{{item.name}}</li>
+	</ul>
+</div>
+<div class="content_box">
+	<h1>{{headingItems[selectedItem].name}}</h1>
+    <div class="booking_container">
+        <div *ngFor="let item of bookingsList">
+            <yuso-bookings-entry buttonColor="#FFD23E" auctionName="{{item.name}}"
+                details="{{item.aditionalDetails}}" [jobId]="item.id"></yuso-bookings-entry>
+        </div>
+    </div>
+</div>

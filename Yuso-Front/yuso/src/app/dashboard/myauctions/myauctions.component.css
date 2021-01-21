@@ -1,0 +1,29 @@
+#container{
+    margin-top: 20px;
+    height: calc(100vh - 120px);
+}
+
+h1{
+    font-family: "Myriad Arabic";
+    font-weight: 500;
+    border-bottom: 1px solid lightgray;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.auction_container{
+    border-top: 1px solid #E4572E;
+    border-bottom: 1px solid #E4572E;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: calc(100vh - 225px);
+    overflow-y: auto;
+}
+
+#no_auctions_info{
+    text-align: center;
+    font-family: "Myriad Arabic";
+    font-size: 30px;
+    margin-top: 50px;
+    color: #E4572E;
+}

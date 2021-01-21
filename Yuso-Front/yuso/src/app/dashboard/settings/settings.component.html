@@ -1,0 +1,78 @@
+<div class="page_content">
+	<div class="headings">
+		<p>ACCOUNT SETTINGS</p>
+		<ul>
+			<li *ngFor="let heading of headings_array; let i = index" [ngClass]="{ 'heading_selected':heading.selected, 'heading_unselected':!heading.selected }"
+			 (click)="onHeadingClick(i)">{{heading.name}}</li>
+		</ul>
+	</div>
+	<div class="settings_content">
+		<h1>{{headings_array[selectedItem].name}}</h1>
+		<div class="settings_container">
+			<!------------GENERAL SETTINGS CONTENT AREA HERE------------>
+			<div *ngIf="selectedItem == 0">
+				<div class="display_flex">
+					<p>Email address:</p>
+					<label id="emailbox">{{email}}</label>
+				</div>
+				<h2>Reset password:</h2>
+				<div class="display_flex">
+					<p class="password_label">Current password:</p>
+					<input type="password" class="form-control" [(ngModel)]="oldPassword" [value]="oldPassword">
+				</div>
+				<div class="display_flex">
+					<p class="password_label">New password:</p>
+					<input type="password" class="form-control" [(ngModel)]="newPassword" [value]="newPassword">
+				</div>
+				<div class="display_flex">
+					<p class="password_label">Confirm new password:</p>
+					<input type="password" class="form-control" [(ngModel)]="confirmPassword" [value]="confirmPassword">
+				</div>
+				<button id="changePassBtn" (click)="onChangePassBtnClick()">Change password</button>
+			</div>
+			<!------------PERSONAL INFO SETTINGS CONTENT AREA HERE------------>
+			<div *ngIf="selectedItem == 1">
+				<div class="display_flex">
+					<p>First name:</p>
+					<input type="text" class="form-control" [(ngModel)]="firstName" [value]="firstName">
+				</div>
+				<div class="display_flex">
+					<p>Last name:</p>
+					<input type="text" class="form-control" [(ngModel)]="lastName" [value]="lastName">
+				</div>
+				<div class="display_flex">
+					<p>County:</p>
+					<input type="text" class="form-control" [(ngModel)]="country" [value]="country">
+				</div>
+				<div class="display_flex">
+					<p>City:</p>
+					<input type="text" class="form-control" [(ngModel)]="city" [value]="city">
+				</div>
+				<div class="display_flex">
+					<p>Address:</p>
+					<input type="text" class="form-control" [(ngModel)]="address" [value]="address">
+				</div>
+				<div class="display_flex">
+					<p>Postal Code:</p>
+					<input type="text" class="form-control" [(ngModel)]="postalCode" [value]="postalCode">
+				</div>
+				<div class="display_flex">
+					<p>Phone number:</p>
+					<input type="text" class="form-control" [(ngModel)]="phoneNumber" [value]="phoneNumber">
+				</div>
+				<button id="savePersonalInfoBtn" (click)="onSavePersInfoBtnClick()">Save info</button>
+			</div>
+			<!------------PROFILE PICTURE SETTINGS CONTENT AREA HERE------------>
+			<div *ngIf="selectedItem == 2">
+				<img class="profile_pic" src="data:image/jpg;base64,{{imageData}}">
+				<p id="image_select_label1">Select new profile image from your computer:</p>
+				<p id="image_select_label2">Supported formats: .jpg, .png, .jpeg (1:1 width/height ratio, max resolution: 1024x1024)</p>
+				<form>
+					<input type="file" id="choose_pic" (change)="onFileChange($event)">
+					<br>
+					<input type="submit" value="Upload and save profile picture" id="save_pic" (click)="saveProfilePicture()">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

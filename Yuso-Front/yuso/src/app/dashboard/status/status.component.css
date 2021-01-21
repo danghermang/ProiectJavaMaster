@@ -1,0 +1,91 @@
+#container{
+    margin-top: 20px;
+    height: calc(150% - 100px);
+}
+
+.main_img{
+    height: 150px;
+    border: 1px solid lightgray;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.img_container{
+    border: 1px solid lightgray;
+    background-color: ghostwhite;
+    width: 400px;
+    height: 75px;
+    margin-left: 25px;
+    user-select: none;
+    margin-top: 5px;
+}
+
+.secondary_img{
+    height: 50px;
+    margin-left: 12px;
+    margin-top: 12px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+h1{
+    font-family: "Myriad Arabic";
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+p{
+    font-family: "Myriad Arabic";
+    font-size: 20px;
+    margin: 0;
+    margin-left: 20px;
+    color: gray;
+}
+
+.important_info{
+    color: #76B041;
+
+}
+
+.location_info{
+    position: absolute;
+    right: 25px;
+}
+
+#left_panel{
+    position: absolute;
+}
+
+#location_container{
+    width: 400px;
+    margin-top: 25px;
+}
+
+.indent{
+    text-indent: 20px;
+}
+
+.map{
+    bottom: 15px;
+    left: 50px;
+    right: 50px;
+    top: 400px;
+    padding: 5%;
+}
+
+#additional_info_header{
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 330px;
+}
+
+#additional_info_content{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 360px;
+    text-indent: 20px;
+    text-align: justify;
+}

@@ -1,0 +1,38 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+  margin: 0;
+  min-width: 1024px;
+  font-family: sans-serif;
+  background: #FDFDFD;
+}
+
+#wrapper{
+  padding-left: 50px;
+}
+
+#topbar_wrapper{
+  padding-top: 50px;
+}
+
+.box {
+  background: #fff;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  width: 70%;
+  position: relative;
+}
+
+.content{
+  padding-top: 35px;
+}
+
+.display_flex{
+  display: flex;
+}
+
+.highcharts-container {
+  width: auto !important;
+  margin-left: -38px !important;
+}

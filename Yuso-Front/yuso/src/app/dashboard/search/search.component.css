@@ -1,0 +1,130 @@
+.search_form{
+	margin-left: 25px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+    justify-content: space-between;
+}
+
+#search_box{
+	margin-left: 6%;
+	width: 84.5%;
+	border-radius: 8px;
+}
+
+.search_bar{
+	width: 26%;
+	height: 25px;
+	border: 2px solid lightgray;
+	font-size: 18px;
+	color: #2F2F2F;
+	padding-left: 5px;
+}
+
+.search_bar:focus{
+	border-color: #1E96DD;
+	outline-width: 0;
+}
+
+.search_btn{
+	border: 2px solid lightgray;
+	width: calc(20% - 75px);
+	border-right: 150px;
+}
+
+.auctions_container{
+	margin-left: 5%;
+    margin-right: 5%;
+}
+
+table{
+	width: 95%;
+	border-spacing: 25px;
+	border-collapse: separate;
+}
+
+td{
+	height: 250px;
+	border: 1px solid lightgray;
+	background-color: white;
+	vertical-align: top;
+}
+
+.auction_flex_container{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.auction{
+    height: 300px;
+    width: 200px;
+    border: 1px solid lightgray;
+    background-color: white;
+    margin-left: 25px;
+    display: block;
+}
+
+.auction:hover{
+    background-color: ghostwhite;
+    border: 1px solid #1E96DD;
+}
+
+td:hover{
+	background-color: ghostwhite;
+	border: 1px solid #1E96DD;
+}
+
+img{
+	height: 100px;
+	border: 1px solid lightgray;
+	left: calc(50% - 50px);
+	position: relative;
+	margin-top: 15px;
+}
+
+p{
+	font-family: "Myriad Arabic";
+	margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+	color: #3A3A3A;
+}
+
+.auctionName{
+	font-size: 20px;
+	color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.auction_enter_btn{
+	border: 1px solid blue;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #1E96DD;
+	cursor: pointer;
+}
+
+.auction_enter_btn p{
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	user-select: none;
+}
+
+.auction_enter_btn:hover{
+	background-color: #5E96FF;
+}
+
+.auction_enter_btn:active{
+	background-color: #2EAAFF;
+}
+
+.no_results{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    color: gray;
+}

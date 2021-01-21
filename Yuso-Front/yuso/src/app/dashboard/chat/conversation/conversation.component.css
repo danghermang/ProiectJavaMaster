@@ -1,0 +1,99 @@
+.minimalistic{
+	width: 70%;
+	height: 100px;
+	margin-left: 15%;
+	margin-bottom: 10px;
+	border: 1px solid lightgray;
+	position: relative;
+	background-color: white;
+}
+
+.minimalistic:hover{
+	background-color: ghostwhite;
+	border-color: #8155A9;
+	cursor: pointer;
+}
+
+.circle{
+	margin-top: 12px;
+	margin-left: 12px;
+	border-radius: 75px;
+	overflow: hidden;
+	width: 75px;
+	height: 75px;
+	border: 1px solid lightgray;
+	position: absolute;
+}
+
+.name{
+	margin-left: 120px;
+	margin-top: 20px;
+	font-weight: bold;
+	color: #3A3A3A;
+	position: absolute;
+	user-select: none;
+}
+
+.time{
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+	font-size: 12px;
+	user-select: none;
+}
+
+.lastmessage{
+	margin-left: 120px;
+	position: absolute;
+	bottom: 25px;
+	color: dimgrey;
+}
+
+img{
+	height: 100%;
+	user-select: none;
+}
+
+.chatbox{
+	background-color: white;
+	border: 1px solid #8155A9;
+	width: 80%;
+	margin-left: 13%;
+	margin-top: 75px;
+	height: 275px;
+	cursor: default;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+p{
+	cursor: text;
+	margin: 10px;
+	padding-left: 15px;
+	padding-top: 5px;
+	font-family: "Myriad Arabic";
+	font-size: 20px;
+	margin: 0;
+}
+
+.chatboxTargetName{
+	font-weight: bold;
+}
+
+.chatboxMyName{
+	font-weight: bold;
+}
+
+input{
+	margin: 0;
+	font-size: 18px;
+	padding-left: 5px;
+	margin-left: 13%;
+	width: calc(80% - 5px);
+	height: 30px;
+	border: 1px solid #8155A9;
+}
+
+input:focus{
+	outline: none;
+}

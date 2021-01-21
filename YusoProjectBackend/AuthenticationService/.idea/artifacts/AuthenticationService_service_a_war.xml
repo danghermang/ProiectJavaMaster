@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AuthenticationService-service-a:war">
+    <output-path>$PROJECT_DIR$/service-a/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>AuthenticationService-service-a</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="AuthenticationService.war">
+      <element id="artifact" artifact-name="AuthenticationService-service-a:war exploded" />
+    </root>
+  </artifact>
+</component>

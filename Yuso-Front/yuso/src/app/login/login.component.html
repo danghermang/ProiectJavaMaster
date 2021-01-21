@@ -1,0 +1,22 @@
+<div class="outer" >
+	<div class="middle" >
+		<div class="introduction-text">
+		<img class="introduction-logo" src="assets/logo.svg">
+		<p >
+			Welcome to yuso. This websites helps you transport things fast and easy.
+			Or become a transporter if you want to make some money!
+		</p></div>
+		<div class="login-box" >
+			<h1 class="form-signin-heading" style="color: #1A1A1A;">Login</h1>
+			<form class="form-signin" #loginForm="ngForm" (ngSubmit)="onLoginClick()">
+				<input type="email" class="form-control" name="emailField" placeholder="Email Address" ngControl="emailField" [(ngModel)]="loginFormData.email" required/>
+				<input type="password" class="form-control" name="passwordField" ngControl="passwordField" [(ngModel)]="loginFormData.password" placeholder="Password" required/>
+				<button class="btn" type="submit">Log in</button>
+			</form>
+			<p class="text-center sign-up" ><strong >
+				<button class="register-button" routerLink="/register">
+				Sign up
+				</button></strong> for a new account</p>
+		</div>
+	</div>
+</div>

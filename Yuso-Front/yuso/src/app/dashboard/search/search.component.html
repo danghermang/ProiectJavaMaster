@@ -1,0 +1,40 @@
+<div class="content">
+	<mat-card class="box" id="search_box">
+		<!-- <div class=""> -->
+        <form [formGroup]="thirdFormGroup" class="form-group row text-center">
+            <div class="col-md-2 offset-md-2">
+                <mat-form-field>
+                    <input matInput placeholder="Search name" [(ngModel)]="searchFilter" [value]="searchFilter" formControlName="thirdCtrl">
+                </mat-form-field>
+            </div>
+            <div class="col-md-2">
+                <mat-form-field>
+                    <input matInput placeholder="From city" [(ngModel)]="fromCityFilter" [value]="fromCityFilter" formControlName="thirdCtrl">
+                </mat-form-field>
+            </div>
+            <div class="col-md-2">
+                <mat-form-field>
+                    <input matInput placeholder="To city" [(ngModel)]="toCityFilter" [value]="toCityFilter" formControlName="thirdCtrl">
+                </mat-form-field>
+            </div>
+            <div class="col-md-2">
+                <button mat-stroked-button color="primary" style="height:50px; width: 90px" (click)="onSearchBtnClick()">Search</button>
+            </div>
+        </form>
+		<!-- </div> -->
+    </mat-card>
+	<div class="auctions_container">
+        <div *ngIf="auctionList==null"><p class="no_results">No results found...</p></div>
+        <div *ngFor="let item of auctionList" class="auction_flex_container">
+            <div class="auction">
+                <img src="assets/package.jpg">
+                <p class="auctionName">{{item.name}}</p>
+                <p>Entries: {{item.entries}}</p>
+                <p>End date: {{item.endDate}}</p>
+                <p>Best bid: {{item.lowestBid}}</p>
+                <p>Weight: {{item.weight}} kg</p>
+                <div class="auction_enter_btn" (click)="onEnterAuctionClick(item.id)"><p>Enter!</p></div>
+            </div>
+        </div>
+	</div>
+</div>

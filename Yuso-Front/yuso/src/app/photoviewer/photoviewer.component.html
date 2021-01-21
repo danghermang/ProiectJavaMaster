@@ -1,0 +1,7 @@
+<div class="curtain" [@curtainAnim]="animState" *ngIf="visible"></div>
+<div *ngIf="visible" [@frameAnim]="animState" id="frame" class="frame">
+	<div id="container" class="img_container">
+		<img id="image" src="{{imageUrl}}">
+	</div>
+	<div id="closebtn" class="close_btn" (click)="onCloseBtnClick()"><p>Close</p></div>
+</div>

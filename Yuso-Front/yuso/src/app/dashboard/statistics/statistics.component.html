@@ -1,0 +1,29 @@
+<div class="container-fluid">
+	<div class="row" style="margin-top: 90px;">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="chart_container">
+								<chart [options]="options"></chart>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="">
+								<div><h1>Statistics</h1></div>
+								<div><p class="stat_desc">Profits this month:</p><p class="stat_info">{{profitThisMonth}} $</p></div><br><br>
+								<div><p class="stat_desc">Total profits:</p><p class="stat_info">{{profitsTotal}} $</p></div><br><br>
+								<div><p class="stat_desc">Km's this month:</p><p class="stat_info">{{distanceThisMonth}} km</p></div><br><br>
+								<div><p class="stat_desc">Km's traveled:</p><p class="stat_info">{{totalDistance}} km</p></div><br><br>
+								<div><p class="stat_desc">Deliveries this month:</p><p class="stat_info">{{deliveriesThisMonth}}</p></div><br><br>
+								<div><p class="stat_desc">Deliveries:</p><p class="stat_info">{{totalDeliveries}}</p></div><br><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

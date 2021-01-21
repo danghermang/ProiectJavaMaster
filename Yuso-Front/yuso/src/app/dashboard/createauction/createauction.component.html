@@ -1,0 +1,95 @@
+<div class="auction_creation_success" *ngIf="success_dialog==true">
+    <p class="success_title">The auction has been published!</p>
+    <p class="success_info">The auction <b>{{auctionName}}</b> has been published! From now on the transporters registered
+        on our site can take part on it. The auction can be viewed by pressing the "My Auctions" button on the main page
+        of the site or by clicking the button below!</p>
+    <img src="assets/ok.svg">
+    <div routerLink="/myauctions" class="btn"><p>View Auctions</p></div>
+</div>
+<mat-card *ngIf="success_dialog==false">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup" [completed]="false">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill auction description</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Auction name" [(ngModel)]="auctionName" [value]="auctionName" formControlName="firstCtrl" required >
+        </mat-form-field><br>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="End auction date" disabled [(ngModel)]="endDate" [value]="endDate" formControlName="firstCtrl" required>
+            <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+            <mat-datepicker #picker disabled="false"></mat-datepicker>          
+          </mat-form-field><br>
+          <mat-form-field>
+              <input matInput placeholder="Cargo wieght" formControlName="firstCtrl" required [(ngModel)]="weight" [value]="weight">
+            </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [completed]="false">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Pickup point</ng-template>
+        <mat-form-field>
+            <input matInput placeholder="City" [(ngModel)]="fromCity" [value]="fromCity" formControlName="secondCtrl" required >
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Address" [(ngModel)]="fromAddress" [value]="fromAddress" formControlName="secondCtrl" required >
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Postal code" [(ngModel)]="fromPostalCode" [value]="fromPostalCode" formControlName="secondCtrl" required >
+        </mat-form-field><br>
+        <mat-form-field>
+            <input matInput [matDatepicker]="pickup" placeholder="Choose a date" [(ngModel)]="pickupDate" [value]="pickupDate" formControlName="secondCtrl" required>
+            <mat-datepicker-toggle matSuffix [for]="pickup"></mat-datepicker-toggle>
+            <mat-datepicker #pickup></mat-datepicker>
+        </mat-form-field><br>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" [completed]="false">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>Drop-off point</ng-template>
+          <mat-form-field>
+              <input matInput placeholder="City" [(ngModel)]="toCity" [value]="toCity" formControlName="thirdCtrl" required >
+          </mat-form-field><br>
+          <mat-form-field>
+            <input matInput placeholder="Address" [(ngModel)]="toAddress" [value]="toAddress" formControlName="thirdCtrl" required >
+          </mat-form-field><br>
+          <mat-form-field>
+            <input matInput placeholder="Postal code" [(ngModel)]="toPostalCode" [value]="toPostalCode" formControlName="thirdCtrl" required >
+          </mat-form-field><br>
+          <mat-form-field>
+              <input matInput [matDatepicker]="dropoff" placeholder="Choose a date"  formControlName="thirdCtrl" [(ngModel)]="dropDate" [value]="dropDate" required>
+              <mat-datepicker-toggle matSuffix [for]="dropoff"></mat-datepicker-toggle>
+              <mat-datepicker #dropoff></mat-datepicker>             
+            </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext >Next</button>
+          </div>
+        </form>
+      </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" (click)="stepper.reset()" [completed]="false">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Aditional information</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Aditional details" [(ngModel)]="details" [value]="details" formControlName="thirdCtrl" required >
+        </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext (click)="createMap()">Next</button>
+      </div>
+    </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" (click)="createMap()" [completed]="false">
+        <ng-template matStepLabel>Final</ng-template>
+        <p class="info_text">Click on map to place the point of the pickup, and then click for the point of the drop-off:</p>
+        <mat-card class="create-auction-box map_resize" id="map"  class="map"></mat-card>
+    </mat-step>
+  </mat-horizontal-stepper>
+  <button mat-button class="create-auction-button" (click)="onCreateAuctionClick()">Create auction</button>
+</mat-card>
